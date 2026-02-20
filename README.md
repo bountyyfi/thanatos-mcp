@@ -140,8 +140,8 @@ This research has been submitted for responsible disclosure to:
 
 ## Credits
 
-Bountyy Oy -- bountyy.fi
-Mihalis Haatainen -- Security Research
+[Bountyy Oy](https://bountyy.fi)
+Mihalis Haatainen — Security Research
 
 ## License
 
