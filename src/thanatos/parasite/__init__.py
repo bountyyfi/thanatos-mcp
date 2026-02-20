@@ -1,0 +1,1 @@
+# Thanatos MCP - Parasite Layers
