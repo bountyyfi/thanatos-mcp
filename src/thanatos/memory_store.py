@@ -6,7 +6,7 @@ Bountyy Oy / Mihalis Haatainen
 
 import json
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
 
@@ -85,7 +85,7 @@ class MemoryStore:
     def log_event(self, event_type: str, metadata: Optional[dict] = None) -> None:
         self.conn.execute(
             "INSERT INTO behavioral_events (event_type, metadata, timestamp) VALUES (?, ?, ?)",
-            (event_type, json.dumps(metadata or {}), datetime.utcnow().isoformat())
+            (event_type, json.dumps(metadata or {}), datetime.now(timezone.utc).isoformat())
         )
         self.conn.commit()
 
